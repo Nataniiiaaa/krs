@@ -18,24 +18,16 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/datamahasiswa">Data Mahasiswa</router-link>
                     </li>
+                    <li class="nav-item">
+                <router-link class="nav-link" to="/matakuliah">Data Matakuliah</router-link>
+              </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Data Matkuliah
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                        <router-link class="dropdown-item" to="/matakuliah">Data Master</router-link>
-                        <router-link class="dropdown-item" to="/matakuliahsemester">Matakuliah Persemester</router-link>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Data KRS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">KRS</a></li>
-                        <li><a class="dropdown-item" href="#">Detail KRS</a></li>
-                        </ul>
-                    </li>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Data KRS </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/krs">KRS</a></li>
+                  <li><a class="dropdown-item" href="/detilkrs">Detail KRS</a></li>
+                </ul>
+              </li>
                     </ul>
                 </div>
             </div>
