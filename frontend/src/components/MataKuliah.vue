@@ -104,7 +104,12 @@ export default {
       axios.get(url).then(({ data }) => {
         console.log(data);
         this.allMatakuliah = data;
+        this.sortMatakuliah(); // Panggil fungsi sort setelah memuat data
       });
+    },
+    sortMatakuliah() {
+      // Fungsi untuk menyortir array matakuliah berdasarkan semester
+      this.allMatakuliah.sort((a, b) => a.semester - b.semester);
     },
     removeMatakuliah(Matakuliah) {
       var url = `https://api-group7-prognet.manpits.xyz/api/matakuliah/${Matakuliah.id}`;
