@@ -109,7 +109,13 @@ export default {
     },
     sortMatakuliah() {
       // Fungsi untuk menyortir array matakuliah berdasarkan semester
-      this.allMatakuliah.sort((a, b) => a.semester - b.semester);
+      this.allMatakuliah.sort((a, b) => {
+        if (a.semester === b.semester) {
+          // Jika semester sama, gunakan localeCompare untuk sorting berdasarkan kode matakuliah
+          return a.kode.localeCompare(b.kode, undefined, { numeric: true, sensitivity: 'base' });
+        }
+        return a.semester - b.semester;
+      });
     },
     removeMatakuliah(Matakuliah) {
       var url = `https://api-group7-prognet.manpits.xyz/api/matakuliah/${Matakuliah.id}`;
@@ -131,3 +137,4 @@ export default {
   },
 };
 </script>
+
