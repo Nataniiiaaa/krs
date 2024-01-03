@@ -163,28 +163,28 @@ export default {
   },
   methods: {
     fetchMahasiswaData() {
-      var url = `http://127.0.0.1:8000/api/mahasiswa/${this.MahasiswaId}`;
+      var url = `https://api-group7-prognet.manpits.xyz/api/mahasiswa/${this.MahasiswaId}`;
       axios.get(url).then(({ data }) => {
         console.log(data);
         this.Mahasiswa = data;
       });
     },
     loadAgamaList() {
-      var agamaUrl = 'http://127.0.0.1:8000/api/agama';
+      var agamaUrl = 'https://api-group7-prognet.manpits.xyz/api/agama';
       axios.get(agamaUrl).then(({ data }) => {
         console.log(data);
         this.agamaList = data;
       });
     },
     loadDetilKrs() {
-      var detilKrsUrl = 'http://127.0.0.1:8000/api/detilkrs';
+      var detilKrsUrl = 'https://api-group7-prognet.manpits.xyz/api/detilkrs';
       axios.get(detilKrsUrl).then(({ data }) => {
         console.log(data);
         this.DetilKrs = data;
       });
     },
     loadMatakuliahList() {
-      var matakuliahUrl = 'http://127.0.0.1:8000/api/matakuliah';
+      var matakuliahUrl = 'https://api-group7-prognet.manpits.xyz/api/matakuliah';
       axios.get(matakuliahUrl).then(({ data }) => {
         console.log(data);
         this.matakuliahList = data;
