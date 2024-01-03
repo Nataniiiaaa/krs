@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import axios from 'axios'; 
+import axios from 'axios';
 
 export default {
   data() {
@@ -41,26 +41,20 @@ export default {
       };
 
       axios.post('https://api-group7-prognet.manpits.xyz/api/login', userData)
-      .then(response => {
-        localStorage.setItem('user', response.data.token);
-        this.redirectUser();
-        alert('Login successful!');
-      })
-      .catch(error => {
-        console.error('Login failed:', error);
-        alert('Login failed. Please try again.');
-      });
-  },
-  redirectUser() {
-    const isUserLoggedIn = localStorage.getItem('user');
-
-    if (isUserLoggedIn) {
-      this.$router.push('/dashboard');
+        .then(response => {
+          console.log(response.data.token); 
+          localStorage.setItem('user', response.data.token);
+          alert('Login successful!');
+          this.$router.push('/dashboard');
+        })
+        .catch(error => {
+          console.error('Login failed:', error);
+          alert('Login failed. Please try again.');
+        });
     }
+  },
+  created() {
+    
   }
-},
-created() {
-  this.redirectUser();
-}
 };
 </script>
