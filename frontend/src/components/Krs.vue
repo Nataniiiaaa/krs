@@ -54,7 +54,7 @@
                 <div class="btn-group">
                   <router-link :to="{ name: 'EditKrs', params: { id: KRS.id } }" class="btn btn-warning">Edit</router-link>
                   <!-- <button type="button" class="btn btn-warning" @click="editMahasiswa(Mahasiswa)">Edit</button> -->
-                  <router-link :to="{ name: 'DetKrs', params: { id: KRS.id } }" class="btn btn-primary">Detail Semester</router-link>
+                  <router-link :to="{ name: 'DetKrs', params: { id: KRS.id } }" class="btn btn-primary">KRS</router-link>
                   <button type="button" class="btn btn-danger" @click="removeKrs(KRS)">Delete</button>
                 </div>
               </td>
